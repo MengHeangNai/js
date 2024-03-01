@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { styles } from "./style";
 import Modal from "./components/Modal";
+import { AiOutlineSearch } from "react-icons/ai";
 
 const ListCountry = () => {
   const [countryData, setCountryData] = useState([]);
@@ -58,6 +59,13 @@ const ListCountry = () => {
         onChange={handleSearch}
         style={styles.searchInput}
       />
+      <AiOutlineSearch style={{
+        position: "absolute",
+        top: "25px",
+        right: "30px",
+        color: "#666",
+        fontSize: "30px",
+      }} />
       {loading ? (
         <div>Loading...</div>
       ) : (
